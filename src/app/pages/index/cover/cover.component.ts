@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cover',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./cover.component.scss']
 })
 export class CoverComponent {
+  
+  constructor(private router: Router){}
+
+  goFeed():void{
+    this.router.navigate(['feed'])
+  }
 
 }

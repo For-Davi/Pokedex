@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { GroupFeedComponent } from './group-feed/group-feed.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    GroupFeedComponent
+  ],
   imports: [
     CommonModule
   ]
