@@ -1,0 +1,26 @@
+@import '../../../config-scss/variables.scss';
+
+#feed{
+    background-color: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    #line-1{
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+
+        #group-text{
+            width: 40%;
+        }
+
+        #favorites{
+            width: 60%;
+        }
+    }
+}

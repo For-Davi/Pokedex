@@ -1,0 +1,25 @@
+@import '../../../../config-scss/variables.scss';
+
+.group-text{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+    padding: 2% 2%;
+
+    h2{
+        color: $color-blue;
+        margin-top: 40px;
+        font-size: 32px;
+
+        span{
+            color: $color-red
+        }
+    }
+
+    p{
+        color: $color-blue;
+        font-size: 20px;
+        padding: 5px 0px;
+    }
+}

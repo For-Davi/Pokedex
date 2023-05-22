@@ -1,0 +1,36 @@
+@import '../../../../config-scss/variables.scss';
+
+#search{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 50px;
+
+    input{
+        outline: none;
+        width: 200px;
+        max-width: 80%;
+        padding: 10px 5px;
+        border: none;
+        border-top: 1px solid $color-red;
+        border-bottom: 1px solid $color-red;
+        border-left:1px solid $color-red;
+        color: $color-blue;
+    }
+
+    button{
+        padding: 10px 5px;
+        border: none;
+        border-top: 1px solid $color-red;
+        border-bottom: 1px solid $color-red;
+        border-right:1px solid $color-red ;
+        background-color: $color-red;
+        color: $color-white;
+        transition: all 0.3s;
+        cursor: pointer;
+
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+}
