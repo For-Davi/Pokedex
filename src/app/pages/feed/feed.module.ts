@@ -6,6 +6,9 @@ import { SearchComponent } from './components/search/search.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { PokedexComponent } from './components/pokedex/pokedex.component';
 import { ListPokemonsComponent } from './components/list-pokemons/list-pokemons.component';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 
 @NgModule({
@@ -19,7 +22,7 @@ import { ListPokemonsComponent } from './components/list-pokemons/list-pokemons.
   ],
   imports: [
     CommonModule,
-
+    HttpClientModule
   ]
 })
 export class FeedModule { }

@@ -1,1 +1,25 @@
-<p>list-pokemons works!</p>
+<div class="container-listPokemons">
+    <div class="group-list">
+        <div class="pokemon" *ngFor="let pokemon of arraysPokemons">
+            <div [class]="pokemon.types[0].type.name" class="pokemon">
+                <div class="header-card">
+                    <span>{{pokemon.name}}</span>
+                    <span>#{{pokemon.id}}</span>
+                </div>
+                <div class="photo">
+                    <img [src]="pokemon.image" [alt]="pokemon.name">
+                </div>
+                <div class="informations">
+                    <div class="line-info">
+                        <span>Altura:</span>
+                        <span>{{pokemon.height}}</span>
+                    </div>
+                    <div class="line-info">
+                        <span>Peso:</span>
+                        <span>{{pokemon.weight}}</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </div>
+</div>

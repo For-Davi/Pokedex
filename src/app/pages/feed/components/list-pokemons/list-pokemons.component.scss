@@ -1,0 +1,199 @@
+@import '../../../../config-scss/variables.scss';
+@import '../../../../config-scss/typesPokemons.scss';
+
+.container-listPokemons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    
+
+    .group-list{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 95%;
+        flex-wrap: wrap;
+
+        .pokemon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 20%;
+            min-width: 300px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            transition: all 0.3s;
+            cursor: pointer;
+
+            &:hover{
+                opacity: 0.9;
+                
+            }
+
+            .cardBack{
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 20%;
+            min-width: 300px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            }
+
+            .header-card{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: row;
+                width: 100%;
+                box-sizing: border-box;
+                
+                span{
+                    color: $color-white;
+                    font-size: 20px;
+                    text-transform: capitalize;
+                    width: 50%;
+                    padding-right: 10px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    box-sizing: border-box;
+                }
+
+                span:nth-child(1){
+                    padding-left: 5px;
+                }
+                
+
+                span:nth-child(2){
+                    text-align: right;
+                    padding-right: 10px;
+                    padding-top: 10px;
+                }
+            }
+
+            .photo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img{
+                    width: 150px;
+                }
+            }
+
+            .informations{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                border-top: 1px solid $color-black;
+                width: 100%;
+                padding: 10px 0px;
+
+                .line-info{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    gap: 40px;
+
+                    span{
+                        color: $color-white;
+                        text-align: center;
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    
+.normal{ 
+    background-color: $normal;
+}
+
+.fighting{
+    background-color: $fighting;
+}
+
+.flying{
+    background-color: $flying;
+}
+
+.poison{
+    background-color: $poison;
+}
+
+.ground{
+    background-color: $ground;
+}
+
+.rock{
+    background-color: $rock;
+}
+
+.bug{
+    background-color: $bug;
+}
+
+.ghost{
+    background-color: $ghost;
+}
+
+.steel{
+    background-color: $steel;
+}
+
+.fire{
+    background-color: $fire;
+}
+
+.water{
+    background-color: $water;
+}
+
+.grass{
+    background-color: $grass;
+}
+
+.eletric{
+    background-color: $eletric;
+}
+
+.psychi{
+    background-color: $psychi;
+}
+
+.ice{
+    background-color: $ice;
+}
+
+.dragon{
+    background-color: $dragon;
+}
+
+.dark{
+    background-color: $dark;
+}
+
+.fairy{
+    background-color: $fairy;
+}
+
+.shadow{
+    background-color: $shadow;
+}
+
+.unknown{
+    background-color: $unknown;
+}
+
+
+}
