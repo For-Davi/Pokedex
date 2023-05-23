@@ -1,0 +1,295 @@
+@import '../../../config-scss/variables.scss';
+@import '../../../config-scss/typesPokemons.scss';
+
+#details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $color-white;
+
+    .container-top{
+        width: 95%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-top:30px ;
+
+        .left{
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-width: 500px;
+
+            .pokemon-name{
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                width: 90%;
+
+                h2{
+                    font-size: 25px;
+                    color: $color-blue;
+                    text-transform: capitalize;
+                }
+                
+            }
+
+            .info-pokemon{
+                display: flex;
+                justify-content: center;
+                align-items: start ;
+                flex-direction: column;
+                width: 90%;
+                padding: 10px 0px;
+
+                p:nth-child(1){
+                    color: $color-blue;
+                    font-size: 18px;
+                    font-weight: 500;
+                    padding: 5px 0px;
+                    width: 200px;
+                    
+
+                    span{
+                        text-transform: capitalize;
+                        color: $color-blue;
+                        text-align: end;
+                        float: right;
+                        margin-right: 5px;
+                    }
+                }
+                p:nth-child(2){
+                    color: $color-blue;
+                    font-size: 18px;
+                    font-weight: 500;
+                    padding: 5px 0px;
+                    width: 200px;
+
+                    span{
+                        text-transform: capitalize;
+                        color: $color-white;
+                        margin-left: 10px;
+                        float: right;
+                        margin-right: 5px;
+                        padding: 5px 10px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+
+            .description{
+                width: 90%;
+                display: flex;
+                justify-content:center;
+                align-items: start;
+                flex-direction: column;
+                padding: 10px 0px;
+
+                h3{
+                    font-size: 22px;
+                    color: $color-blue;
+                }
+
+                p{
+                    padding: 5px 15px 0px 0px;
+                    box-sizing: border-box;
+                    color: $color-blue;
+                }
+            }
+
+            .group-stats{
+                display: flex;
+                justify-content: center;
+                align-items: start;
+                flex-direction: column;
+                width: 90%;
+                padding: 10px 0px;
+                
+
+                h3{
+                    color: $color-blue;
+                    font-size: 22px;
+                }
+
+                .stats{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    padding: 10px 0px;
+
+                    span{
+                        text-transform: capitalize;
+                        color: $color-blue;
+                        font-weight: 500;
+                        padding: 5px 0px;
+                    }
+
+                     progress {
+                            width: 200px;
+                            height: 14px;
+                            border: none;
+                            border-radius: 10px;
+                            background-color: #f2f2f2;
+                            min-width: 300px;
+
+                            
+                        &::-webkit-progress-bar {
+                            border-radius: 10px;
+                            background-color: #f2f2f2;
+                        }
+
+                        &::-webkit-progress-value {
+                            border-radius: 10px;
+                            background-color: $color-red;
+                        }
+
+                        &::-moz-progress-bar {
+                            border-radius: 10px;
+                            background-color: $color-red;
+                        }
+
+                        &::-ms-fill {
+                            border-radius: 10px;
+                            background-color: $color-red;
+                        }
+                        
+                        
+                    }
+
+                }
+
+            }
+        }
+
+        .right{
+            width: 30%;
+            min-width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .photo{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+
+                img{
+                    width: 450px;
+                    margin: 50px 0px;
+                }
+
+                button{
+                    border: none;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                    background-color: $color-red;
+                    color: $color-white;
+                    transition: all 0.3s;
+                    border-radius: 5px;
+
+                    &:hover{
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+
+        
+    }
+
+    .container-bottom{
+        padding: 50px 0px;
+    }
+
+}
+
+
+
+
+    
+.normal{ 
+    background-color: $normal;
+}
+
+.fighting{
+    background-color: $fighting;
+}
+
+.flying{
+    background-color: $flying;
+}
+
+.poison{
+    background-color: $poison;
+}
+
+.ground{
+    background-color: $ground;
+}
+
+.rock{
+    background-color: $rock;
+}
+
+.bug{
+    background-color: $bug;
+}
+
+.ghost{
+    background-color: $ghost;
+}
+
+.steel{
+    background-color: $steel;
+}
+
+.fire{
+    background-color: $fire;
+}
+
+.water{
+    background-color: $water;
+}
+
+.grass{
+    background-color: $grass;
+}
+
+.electric{
+    background-color: $electric;
+}
+
+.psychic{
+    background-color: $psychic;
+}
+
+.ice{
+    background-color: $ice;
+}
+
+.dragon{
+    background-color: $dragon;
+}
+
+.dark{
+    background-color: $dark;
+}
+
+.fairy{
+    background-color: $fairy;
+}
+
+.shadow{
+    background-color: $shadow;
+}
+
+.unknown{
+    background-color: $unknown;
+}

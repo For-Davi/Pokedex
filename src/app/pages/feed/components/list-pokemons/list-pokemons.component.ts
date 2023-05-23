@@ -22,7 +22,7 @@ export class ListPokemonsComponent implements OnInit {
   constructor(private http: HttpClient, private router: Router, private service: RequestService){}
 
   ngOnInit(): void {
-
+    this.offset = Math.floor(Math.random()*200)
     this.service.loadInitialPokemons(this.offset, this.limit).subscribe((response:Pokemon)=>{
       response.results.map((res)=>{
         this.http.get<any>(res.url).subscribe((resData:any)=>{
@@ -56,7 +56,6 @@ export class ListPokemonsComponent implements OnInit {
         about: ''
       }
       this.Details.push(details)
-      console.log(this.Details);
     })
     this.router.navigate(['feed','details',id])
   }

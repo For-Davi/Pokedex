@@ -1,6 +1,8 @@
 <section id="index">
     <div class="group">
-        <video src="../../../../assets/video/Pokémon Preto e Branco.mp4" [autoplay]="true" loop [volume]="statusAudio"></video>
+        <video autoplay loop [volume]="statusAudio">
+            <source [src]="'../../../../assets/video/Pokémon Preto e Branco.mp4'" >
+        </video>
 
         <div class="overlay">
             <div class="index-background">
