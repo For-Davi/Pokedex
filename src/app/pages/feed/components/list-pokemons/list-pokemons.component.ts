@@ -1,5 +1,5 @@
 import { RequestService } from './../../../../services/request.service';
-import { Component , Input, OnInit} from '@angular/core';
+import { Component , Input, OnInit, Output} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Pokemon } from 'src/app/interfaces/pokemon';
 import { pokemonList } from 'src/app/interfaces/pokemonList';
@@ -17,7 +17,7 @@ export class ListPokemonsComponent implements OnInit {
   @Input() public limit:number = 20
 
   arraysPokemons:any[] = []
-  Details :any[]=[]
+  @Output() Details :any[]=[]
   
   constructor(private http: HttpClient, private router: Router, private service: RequestService){}
 
@@ -32,7 +32,7 @@ export class ListPokemonsComponent implements OnInit {
             height: resData.height,
             weight: resData.weight,
             types: resData.types,
-            image: resData.sprites.front_default
+            image: resData.sprites.other.dream_world.front_default
           }
           this.arraysPokemons.push(pokemon)
         })
@@ -51,8 +51,9 @@ export class ListPokemonsComponent implements OnInit {
         base_experience: res.base_experience,
         abilities:res.abilities,
         sprites: res.sprites,
-        states: res.states,
-        types: res.types
+        stats: res.stats,
+        types: res.types,
+        about: ''
       }
       this.Details.push(details)
       console.log(this.Details);

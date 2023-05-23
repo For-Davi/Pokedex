@@ -6,6 +6,8 @@ export interface PokemonDetails {
     base_experience: number | null
     abilities:[] | null
     sprites: [] | null
-    states: [] | null
+    stats: [] | null
     types: [] | null
+    about: any
+
 }

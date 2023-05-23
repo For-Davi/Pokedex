@@ -9,7 +9,7 @@ import { FeedModule } from './pages/feed/feed.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

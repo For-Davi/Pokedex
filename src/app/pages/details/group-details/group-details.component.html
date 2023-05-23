@@ -1,1 +1,33 @@
-<p>group-details works!</p>
+<section id="details">
+    <div class="container" *ngFor="let pokemon of pokemonDetails">
+        <div id="line1">
+            <div class="left">
+                <div class="pokemon-name">
+                    <h2>{{pokemon.name}}</h2>
+                </div>
+                <div class="info-pokemon">
+                    <p>ID: <span>{{pokemon.id}}</span></p>
+                    <p>Tipo: <span>{{pokemon.types[0].type.name}}</span></p>
+                </div>
+                <div class="description">
+                    <h3>Descrição</h3>
+                    <p>{{ pokemon.about && pokemon.about.about}}</p>
+                </div>
+                <div class="group-stats">
+                    <div class="stats" *ngFor="let stats of pokemon.stats ">
+                        <span>{{stats.stat.name}}:</span>
+                        <progress [value]="stats.base_stat" max="100"></progress>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="photo">
+                    <img [src]="pokemon.sprites.other.dream_world.front_default" alt="pokemon.name">
+                </div>
+            </div>
+        </div>
+        <div id="line2">
+
+        </div>
+    </div>
+</section>
