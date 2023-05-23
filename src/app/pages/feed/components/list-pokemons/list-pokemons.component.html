@@ -1,7 +1,7 @@
 <div class="container-listPokemons">
     <div class="group-list">
         <div class="pokemon" *ngFor="let pokemon of arraysPokemons">
-            <div [class]="pokemon.types[0].type.name" class="pokemon">
+            <div [class]="pokemon.types[0].type.name" class="pokemon" (click)="goDetails(pokemon.id)">
                 <div class="header-card">
                     <span>{{pokemon.name}}</span>
                     <span>#{{pokemon.id}}</span>
