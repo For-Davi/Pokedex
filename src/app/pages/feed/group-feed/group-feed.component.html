@@ -2,7 +2,7 @@
     
     <div id="line-1">
         <div id="group-text">
-            <app-text/>
+            <app-text (setPokemonFilter)="getPokemonFilter($event)"/>
         </div>
 
         <div id="favorites">
@@ -11,6 +11,6 @@
     </div> <!--line-1-->
 
     <div id="line-2">
-        <app-pokedex/>
+        <app-pokedex [pokemonFilter]="arrayPokemonFilter"/>
     </div><!--line-2-->
 </section>

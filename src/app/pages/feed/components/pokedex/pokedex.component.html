@@ -4,18 +4,12 @@
 
         <div class="pagination-pokemons">
             <div class="btn-page">
-                <button>Anterior</button>
-            </div>
-
-            <span>1</span>
-
-            <div class="btn-page">
-                <button>Próximo</button>
+                <button (click)="reload()">Reload</button>
             </div>
         </div>
     </div>
 
     <div class="list-pokemons">
-        <app-list-pokemons/>
+        <app-list-pokemons [pokemonFilter]="pokemonFilterArray"/>
     </div>
 </section>

@@ -23,4 +23,8 @@ export class RequestService {
   descriptionPokemon(id:number | null){
     return this.http.get(`${environments.urlApi}/pokemon-species/${id}`)
   }
+
+  inputPokemon(pokemon:string){
+    return this.http.get(`${environments.urlApi}/pokemon/${pokemon}`)
+  }
 }

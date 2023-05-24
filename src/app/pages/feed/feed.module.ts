@@ -7,6 +7,7 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
 import { PokedexComponent } from './components/pokedex/pokedex.component';
 import { ListPokemonsComponent } from './components/list-pokemons/list-pokemons.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ]
 })
 export class FeedModule { }

@@ -1,5 +1,5 @@
 import { RequestService } from './../../../../services/request.service';
-import { Component , Input, OnInit, Output} from '@angular/core';
+import { Component, Input, OnInit, Output, DoCheck, SimpleChanges, OnChanges } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Pokemon } from 'src/app/interfaces/pokemon';
 import { pokemonList } from 'src/app/interfaces/pokemonList';
@@ -11,15 +11,41 @@ import { PokemonDetails } from 'src/app/interfaces/pokemonDetails';
   templateUrl: './list-pokemons.component.html',
   styleUrls: ['./list-pokemons.component.scss']
 })
-export class ListPokemonsComponent implements OnInit {
+export class ListPokemonsComponent implements OnInit , OnChanges{
 
   @Input() public offset:number = 0
   @Input() public limit:number = 20
+  @Input() public pokemonFilter: any[]=[]
 
   arraysPokemons:any[] = []
   @Output() Details :any[]=[]
   
   constructor(private http: HttpClient, private router: Router, private service: RequestService){}
+  
+  // ngDoCheck(): void {
+  //   if(this.pokemonFilter.length > 0){
+  //     this.arraysPokemons.push(this.pokemonFilter[1])
+      
+  //   }
+  // }
+  
+  
+  
+  ngOnChanges(changes: SimpleChanges): void {
+    if(changes['pokemonFilter'] && changes['pokemonFilter'].currentValue.length > 0){
+
+      const novoValor = changes['pokemonFilter'].currentValue
+      const velhoValor = changes['pokemonFilter'].previousValue
+
+      this.arraysPokemons = []
+      this.arraysPokemons = this.pokemonFilter[0]
+      // console.log(this.arraysPokemons);
+    }
+  }
+
+  
+  
+  
 
   ngOnInit(): void {
     this.offset = Math.floor(Math.random()*200)
@@ -39,6 +65,7 @@ export class ListPokemonsComponent implements OnInit {
       })
     })
   }
+
    
   goDetails(id:number):void{
 
