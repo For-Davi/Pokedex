@@ -1,5 +1,5 @@
 import { RequestService } from './../../../services/request.service';
-import { Component, OnChanges, OnInit, SimpleChange, Input, SimpleChanges } from '@angular/core';
+import { Component,OnInit} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, Route } from '@angular/router';
 import { PokemonDetails } from 'src/app/interfaces/pokemonDetails';
@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
   templateUrl: './group-details.component.html',
   styleUrls: ['./group-details.component.scss']
 })
-export class GroupDetailsComponent implements OnInit, OnChanges  {
+export class GroupDetailsComponent implements OnInit {
 
   pokemonDetails:any[]= []
   description: any[] =[]
@@ -24,10 +24,6 @@ export class GroupDetailsComponent implements OnInit, OnChanges  {
   
 
   constructor(private http:HttpClient,private route:ActivatedRoute, private requestService: RequestService, private router: Router){}
-  
-  ngOnChanges(changes: SimpleChanges): void {
-    
-  }
   
   ngOnInit(): void {
       
@@ -80,20 +76,12 @@ export class GroupDetailsComponent implements OnInit, OnChanges  {
 
 
   changeRouterId(value: any){
-    console.log(value, 'VALOR QUE CHEGOU');
-    console.log(this.pokemonDetails, 'VALOR QUE TINHA');
     this.pokemonDetails = value
   }
 
   goFeed():void{
     this.router.navigate(['feed'])
   }
-
-
-
-  
-
-   
 
 }
 

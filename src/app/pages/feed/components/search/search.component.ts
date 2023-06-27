@@ -13,6 +13,7 @@ export class SearchComponent {
   offset: number = 1
   limit: number = 1
   arrayPokemonFilter: any[]=[]
+  
   @Output() pokemonFilter = new EventEmitter<any>()
 
   constructor(private requestService:RequestService){}
@@ -29,6 +30,8 @@ export class SearchComponent {
         image: res.sprites.other.dream_world.front_default,
         types: res.types
       }
+      
+      this.arrayPokemonFilter = []
       this.arrayPokemonFilter.push(pokemon)
       this.pokemonFilter.emit(this.arrayPokemonFilter)
       this.valueInput = ''

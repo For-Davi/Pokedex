@@ -8,6 +8,7 @@ import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 export class PokedexComponent implements OnChanges{
   
   @Input() pokemonFilter:any[]=[]
+  
   pokemonFilterArray: any[]= []
   
   ngOnChanges(changes: SimpleChanges): void {

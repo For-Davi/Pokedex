@@ -8,11 +8,13 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class TextComponent {
 
   @Output() setPokemonFilter = new EventEmitter()
+  
   arrayPokemonFilter: any[]=[]
 
   constructor(){}
 
   getPokemonFilter(value: Event){
+    this.arrayPokemonFilter = []
     this.arrayPokemonFilter.push(value)
     this.setPokemonFilter.emit(this.arrayPokemonFilter)
   }

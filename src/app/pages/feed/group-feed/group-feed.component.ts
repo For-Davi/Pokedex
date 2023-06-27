@@ -13,6 +13,7 @@ export class GroupFeedComponent {
   constructor(){}
 
   getPokemonFilter(value: Array<pokemonList>){
+    this.arrayPokemonFilter = []
     this.arrayPokemonFilter = value
   }
 }
